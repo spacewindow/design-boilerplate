@@ -1,0 +1,26 @@
+<% include partials/header.html.ejs %>
+
+    <section>
+      HELLO
+    </section>
+
+    <section>
+
+      <% allData.forEach(function(project){ %>
+
+        <div class="grid-cell grid6 work">
+          <a href="/<%= project.id %>">
+            <img src="/images/thumb-<%= project.id %>.jpg" alt="">
+
+            <div class="work__details">
+              <p class="work__client"><%- project.client %></p>
+              <h3 class="work__name"><%- project.title %></h3>
+            </div>
+          </a>
+        </div>
+
+      <% }) %>
+
+    </section>
+
+<% include partials/footer.html.ejs %>
